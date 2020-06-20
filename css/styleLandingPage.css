@@ -4,12 +4,12 @@
 }
 
 nav.navbar.navbar-expand-sm.navbar-light.bg-light {
-    padding: 0px 20px;
+  padding: 0px 20px;
 }
 
 nav li {
-    height: 100%;
-    padding: 11px 10px;
+  height: 100%;
+  padding: 11px 10px;
 }
 
 li.nav-item.dropdown:hover {
@@ -17,10 +17,10 @@ li.nav-item.dropdown:hover {
 }
 
 form.form-inline {
-    margin-right: 15px;
+  margin-right: 15px;
 }
 
-.menu-icon img{
+.menu-icon img {
   width: 25px;
   display: block;
   margin: 0 auto;
@@ -60,7 +60,7 @@ img.d-block.w-100 {
   display: flex;
 }
 
-.huongDan-body>div {
+.huongDan-body > div {
   margin-left: 20px;
 }
 
@@ -68,27 +68,66 @@ img.d-block.w-100 {
   width: 40px;
 }
 
-.huongDan-body p{
+.huongDan-body p {
   margin: 0;
   font-size: 13px;
 }
-.huongDan-body h6{
+.huongDan-body h6 {
   margin: 0;
-    font-weight: 600;
+  font-weight: 600;
 }
 
 .sanPhamBanChay p {
   margin: 0;
 }
-.sanPhamBanChay .nav{
+.sanPhamBanChay .col-9 .nav {
   margin-bottom: 10px;
   border-bottom: red 1px solid;
 }
-.sanPhamBanChay .active {
+.sanPhamBanChay .col-9 p.nav-link.active {
   background-color: red;
+  font-weight: 600;
+  color: white;
 }
 
 ul.right-nav.navbar-nav.mr-auto.mt-2.mt-lg-0 {
   margin-right: 0px !important;
 }
 
+.tin_tuc_title {
+  margin-bottom: 10px;
+}
+
+.sanPhamBanChay .col-3 .nav {
+  background-color: red;
+}
+
+.tin_tuc_title p {
+  padding-left: 10px;
+  font-weight: 600;
+  color: white;
+}
+
+.tin_tuc_content {
+}
+
+.tin_tuc_gach_ngang {
+  width: 20px;
+  height: 2px;
+  background-color: black;
+  margin: 5px 0px;
+}
+
+.tin_tuc_content_item {
+  margin-bottom: 12px;
+}
+
+.tin_tuc_content p {
+  font-size: 11px;
+}
+
+.tin_tuc_content h6 {
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 0px;
+}
