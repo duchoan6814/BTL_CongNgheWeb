@@ -77,17 +77,27 @@ img.d-block.w-100 {
   font-weight: 600;
 }
 
+.sanPhamBanChay {
+  margin-bottom: 30px;
+}
+
 .sanPhamBanChay p {
   margin: 0;
 }
-.sanPhamBanChay .col-9 .nav {
+.col-9 .nav {
   margin-bottom: 10px;
   border-bottom: red 1px solid;
+  background-color: #ececec;
 }
-.sanPhamBanChay .col-9 p.nav-link.active {
+.col-9 p.nav-link.active {
   background-color: red;
   font-weight: 600;
   color: white;
+  margin-bottom: 0px;
+}
+
+.col-9 p.nav-link {
+  margin-bottom: 0px;
 }
 
 ul.right-nav.navbar-nav.mr-auto.mt-2.mt-lg-0 {
