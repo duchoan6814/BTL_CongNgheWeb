@@ -133,11 +133,86 @@ ul.right-nav.navbar-nav.mr-auto.mt-2.mt-lg-0 {
 }
 
 .tin_tuc_content p {
-  font-size: 11px;
+  font-size: 12px;
 }
 
 .tin_tuc_content h6 {
   font-size: 13px;
   font-weight: 600;
   margin-bottom: 0px;
+}
+
+.item-cart img {
+  height: 155px;
+}
+
+.item-cart {
+  margin-bottom: 11px;
+}
+
+.item-cart:nth-child(n + 5) {
+  margin-bottom: 0;
+}
+
+.laptop {
+  margin-bottom: 30px;
+}
+
+.gioi_thieu img {
+  height: 274px;
+}
+
+.gioi_thieu h4 {
+  font-weight: 600;
+}
+
+.gioi_thieu h6 {
+  font-weight: 600;
+  font-size: 21px;
+  margin-bottom: 20px;
+}
+
+.gioi_thieu {
+  margin-bottom: 30px;
+}
+
+.footer {
+  background-color: #c2050b;
+  color: white;
+  padding: 40px 0px;
+}
+
+.footer h6 {
+  font-weight: 600;
+  color: yellow;
+  margin-bottom: 15px;
+}
+
+.footer p {
+  font-size: 15px;
+}
+
+footer p {
+  text-align: center;
+  color: white;
+  margin-bottom: 0px;
+}
+
+footer {
+  background-color: black;
+  padding: 20px 0px;
+}
+
+.item_dien_thoai h4 {
+  font-size: 15px;
+  margin-bottom: 0px;
+}
+
+.item_dien_thoai p {
+  font-size: 13px;
+  color: red;
+}
+
+.item_dien_thoai .card {
+  height: 242px !important;
 }
