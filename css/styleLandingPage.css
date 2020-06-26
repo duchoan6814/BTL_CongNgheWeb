@@ -203,16 +203,19 @@ footer {
   padding: 20px 0px;
 }
 
-.item_dien_thoai h4 {
+.item_dien_thoai h4,
+.item-laptop h4 {
   font-size: 15px;
   margin-bottom: 0px;
 }
 
-.item_dien_thoai p {
+.item_dien_thoai p,
+.item-laptop p {
   font-size: 13px;
   color: red;
 }
 
-.item_dien_thoai .card {
-  height: 242px !important;
+.active-of-item {
+  background-color: grey;
+  color: white;
 }
