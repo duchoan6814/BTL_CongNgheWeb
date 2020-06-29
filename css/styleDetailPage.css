@@ -1,0 +1,45 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+tbody {
+    font-size: 13px;
+}
+
+div.gia h4 {
+    color: red;
+}
+
+.thong_tin_dien_thoai .card p, .thong_tin_dien_thoai .card label  {
+    font-size: 14px;
+}
+
+ .thong_tin_dien_thoai .card ul {
+     margin-bottom: 0;
+ }
+
+ .thong_tin_dien_thoai .card ul li {
+     list-style: none;
+ }
+
+ .mua_dien_thoai .btn_mua_ngay {
+    background-color: #f97d0f;
+    border-color: #f97d0f;
+ }
+
+ .line_comment {
+     margin-bottom: 10px;
+ }
+
+ .line_comment h5 {
+     font-size: 17px;
+     font-weight: 600;
+ }
+
+ .line_comment p {
+     font-size: 15px;
+     margin-bottom: 0px;
+ }
+

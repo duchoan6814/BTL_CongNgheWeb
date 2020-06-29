@@ -5,80 +5,465 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/styleLandingPage.css">
+    <link rel="stylesheet" href="../css/styleDetailPage.css">
     <title>Document</title>
 </head>
 
 <body>
-    <h1>hello anh em</h1>
-    <nav class="navbar navbar-expand-sm navbar-light bg-light">
-        <a class="navbar-brand" href="#">Navbar</a>
-        <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId"
-            aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="collapsibleNavId">
-            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown"
-                        aria-haspopup="true" aria-expanded="false">Dropdown</a>
-                    <div class="dropdown-menu" aria-labelledby="dropdownId1">
-                        <a class="dropdown-item" href="#">Action 1</a>
-                        <a class="dropdown-item" href="#">Action 2</a>
+    <div class="container">
+        <nav class="row navbar navbar-expand-sm navbar-light bg-light">
+            <a class="navbar-brand" href="../html/index.html">HMTV Smart</a>
+            <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse"
+                data-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavId">
+                <form class="form-inline">
+                    <div class="form-group">
+                        <input type="text" name="" id="" class="form-control" placeholder="Search..."
+                            aria-describedby="helpId">
                     </div>
-                </li>
-            </ul>
-            <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="text" placeholder="Search" id="search">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-            </form>
-        </div>
-    </nav>
+                </form>
+                <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
 
-    <div id="carouselId" class="carousel slide" data-ride="carousel">
-        <ol class="carousel-indicators">
-            <li data-target="#carouselId" data-slide-to="0" class="active"></li>
-            <li data-target="#carouselId" data-slide-to="1"></li>
-            <li data-target="#carouselId" data-slide-to="2"></li>
-        </ol>
-        <div class="carousel-inner" role="listbox">
-            <div class="carousel-item active">
-                <img data-src="holder.js/900x500/auto/#777:#555/text:First slide" alt="First slide">
+                    <li class="nav-item dropdown" id="dropdown-dienThoai">
+                        <div class="menu-icon">
+                            <img src="../icon/phone.svg" alt="phone">
+                            <h6>Điện thoại</h6>
+                        </div>
+                        <div class="dropdown-menu" id="contentDropdownOfDienThoai">
+                            <a class="dropdown-item" href="#">iPhone</a>
+                            <a class="dropdown-item" href="#">Samsung</a>
+                            <a class="dropdown-item" href="#">Xiaomi</a>
+                            <a class="dropdown-item" href="#">Vsmart</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown" id="dropdown-laptop">
+                        <div class="menu-icon">
+                            <img src="../icon/laptop-icon.svg" alt="phone">
+                            <h6>Laptop</h6>
+                        </div>
+                        <div class="dropdown-menu" id="contentDropdownOfLaptop">
+                            <a class="dropdown-item" href="#">MackBook</a>
+                            <a class="dropdown-item" href="#">Dell</a>
+                            <a class="dropdown-item" href="#">Asus</a>
+                            <a class="dropdown-item" href="#">Acer</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown" id="dropdown-dongho">
+                        <div class="menu-icon">
+                            <img src="../icon/donghodeotay-icon.svg" alt="phone">
+                            <h6>Linh kiện</h6>
+                        </div>
+                        <div class="dropdown-menu" id="contentDropdownOfdongHo">
+                            <a class="dropdown-item" href="#">Mainboard</a>
+                            <a class="dropdown-item" href="#">CPU</a>
+                            <a class="dropdown-item" href="#">VGA</a>
+                            <a class="dropdown-item" href="#">Ổ cứng</a>
+                            <a class="dropdown-item" href="#">RAM</a>
+                        </div>
+                    </li>
+                </ul>
+
+                <ul class="right-nav navbar-nav mr-auto mt-2 mt-lg-0">
+                    <li class="nav-item ">
+                        <img src="../icon/gioHang-icon.svg" alt="">
+                    </li>
+                    <li class="nav-item ">
+                        <button data-toggle="modal" data-target="#modalLogin" name="" id="" class="btn btn-primary"
+                            href="#" role="button">Đăng Nhập</button>
+                    </li>
+                    <li class="nav-item ">
+                        <button data-toggle="modal" data-target="#modalRegisterForm" name="" id=""
+                            class="btn btn-primary" href="#" role="button">Đăng ký</button>
+                    </li>
+                </ul>
+
             </div>
-            <div class="carousel-item">
-                <img data-src="holder.js/900x500/auto/#666:#444/text:Second slide" alt="Second slide">
+        </nav>
+        <div class="row ten_dien_thoai my-4">
+            <div class="col-12">
+                <h3>Điện thoại OPPO Reno3</h3>
             </div>
-            <div class="carousel-item">
-                <img data-src="holder.js/900x500/auto/#666:#444/text:Third slide" alt="Third slide">
+
+        </div>
+
+        <hr>
+
+
+        <div class="row thong_tin_dien_thoai">
+            <div class="col-8">
+                <div class="thong_so_kỹ_thuat">
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="row">
+                                <div class="col-12 hinh_anh_dien_thoai">
+                                    <!-- <img class="img-fluid"
+                                        src="https://cdn.tgdd.vn/Products/Images/42/213591/oppo-reno3-trang-400x460-400x460.png"
+                                        alt="">
+                                    <p class="text-center mt-4">hình ảnh sản phẩm thực tế</p> -->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <h5>Thông số kĩ thuật</h5>
+                            <table class="table">
+                                <tbody>
+                                    <tr>
+                                        <td>Màn hình:</td>
+                                        <td id="manHinh">AMOLED, 6.4", Full HD+</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Hệ điều hành:</td>
+                                        <td id="heDieuHanh">Android 10</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Camera sau:</td>
+                                        <td id="cameraSau">Chính 48 MP & Phụ 13 MP, 8 MP, 2 MP</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Camera trước:</td>
+                                        <td id="cameraTruoc">44 MP</td>
+                                    </tr>
+                                    <tr>
+                                        <td>CPU:</td>
+                                        <td id="CPU">MediaTek Helio P90 8 nhân</td>
+                                    </tr>
+                                    <tr>
+                                        <td>RAM:</td>
+                                        <td id="RAM">8 GB</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Bộ nhớ trong:</td>
+                                        <td id="ROM">128 GB</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Thẻ nhớ:</td>
+                                        <td id="theNho">MicroSD, hỗ trợ tối đa 256 GB</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Thẻ SIM:</td>
+                                        <td id="SIM">2 Nano SIM, Hỗ trợ 4G</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Dung lượng pin:</td>
+                                        <td id="PIN">4025 mAh, có sạc nhanh</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4 mua_dien_thoai">
+                <div class="gia">
+                    <h4>8.490.000₫</h4>
+                </div>
+                <div class="card py-3 px-3">
+                    <h5>KHUYẾN MÃI</h5>
+                    <ul>
+                        <li>
+                            <p>Tặng tiền cước 500.000đ (đã trừ vào giá)
+                            <p>
+                        </li>
+                        <li>
+                            <p>Tặng 2 suất mua Đồng hồ thời trang giảm 40% (không áp dụng thêm khuyến mãi khác) (click
+                                xem chi tiết)
+                            <p>
+                        </li>
+                    </ul>
+                    <hr>
+                    <h5>Chọn thêm các dịch vụ miễn phí</h5>
+                    <div class="form-check">
+                        <label class="form-check-label">
+                            <input type="checkbox" class="form-check-input" name="" id="" value="checkedValue" checked>
+                            Giao ngay từ cửa hàng gần bạn nhất
+                        </label>
+                        <label class="form-check-label">
+                            <input type="checkbox" class="form-check-input" name="" id="" value="checkedValue" checked>
+                            Chuyển danh bạ, dữ liệu qua máy mới
+                        </label>
+                        <label class="form-check-label">
+                            <input type="checkbox" class="form-check-input" name="" id="" value="checkedValue" checked>
+                            Display valueMang nhiều màu để bạn lựa chọnlabel>
+                            <label class="form-check-label">
+                                <input type="checkbox" class="form-check-input" name="" id="" value="checkedValue"
+                                    checked>
+                                Mang thêm điện thoại khác để bạn xem
+                            </label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <button type="button" name="" id=""
+                            class="btn btn-primary my-2 btn-lg btn-block btn_mua_ngay">Mua ngay</button>
+                    </div>
+                </div>
             </div>
         </div>
-        <a class="carousel-control-prev" href="#carouselId" role="button" data-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#carouselId" role="button" data-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-        </a>
+
+        <div class="row dac_dien_noi_bat mt-3">
+            <div class="col-12">
+                <button class="btn btn-primary btn-block" type="button" data-toggle="collapse" data-target="#contentId"
+                    aria-expanded="false" aria-controls="contentId">
+                    Đặc điểm nổi bật của OPPO Reno3
+                </button>
+                <div class="collapse" id="contentId">
+                    <p class="mt-3">
+                        Bộ sản phẩm chuẩn: Hộp, Sạc, Tai nghe, Sách hướng dẫn, Cáp, Cây lấy sim, Ốp lưng
+
+                        OPPO Reno3 là một sản phẩm ở phân khúc tầm trung nhưng vẫn sở hữu cho mình ngoại hình bắt mắt,
+                        cụm
+                        camera chất lượng và cùng nhiều đột phá về màn hình cũng như hiệu năng.
+                        Nhiếp ảnh, quay phim đỉnh với cụm camera chất
+                        Xu thế nhiều camera đang "nở rộ" và trên "đứa con cưng của mình" thì OPPO đã mang tới cho người
+                        dùng
+                        cụm
+                        4 camera chất lượng ở mặt sau máy.
+
+                        OPPO Reno3 | Nhiếp ảnh, quay phim đỉnh với cụm camera chất
+
+                        Camera chính có độ phân giải 48 MP cho ra những hình ảnh sắc nét và khả năng chụp tối ấn tượng.
+                        Còn
+                        lại
+                        là ống kính góc siêu rộng 8 MP, cảm biến xóa phông trắng đen 2 MP và camera tele 13 MP.
+
+                        OPPO Reno3 | Giao diện camera sau
+
+                        Ở điều kiện đủ sáng, OPPO Reno3 mang đến bức ảnh đẹp mắt với độ tương phản cao. OPPO nói rằng
+                        chiếc
+                        máy
+                        có khả năng xử lý bằng phần mềm để cho ra bức ảnh với độ chi tiết tương tự các bức ảnh 108 MP,
+                        cho
+                        bạn
+                        thả ga in ấn hay phóng lớn bất kì vùng ảnh nào.
+
+                        Khả năng zoom xa trên Reno 3 cũng rất ấn tượng, nhờ vào việc kết hợp cả 3 ống kính cùng một lúc
+                        và
+                        phần
+                        mềm để cho bức ảnh zoom số lên đến 20X, đảm bảo chất lượng rõ ràng và màu sắc không lệch nhiều.
+
+                        OPPO Reno3 | Khả năng Zoom
+
+                        Reno 3 được trang bị tính năng siêu chụp đêm Ultra Dark Mode, tận dụng khả năng xử lý AI và khử
+                        nhiễu đa
+                        khung cho ra bức ảnh trong tối rõ nét và tươi sáng hơn.
+
+                        OPPO Reno3 | Chụp đêm
+
+                        Được tích hợp song song tính năng "Siêu chống rung" và "Siêu chống rung Pro", smartphone nhà
+                        OPPO tự
+                        tin
+                        xử lý tốt các đoạn video khó nhằn với độ ổn định và chất lượng hình ảnh cao mà không cần đến giá
+                        đỡ
+                        chống rung.
+
+                        OPPO Reno3 | Siêu chống rung Pro
+
+                        Tính năng Siêu chống rung Pro trên OPPO Reno 3
+
+                        Bên cạnh đó, nhiều tính năng hay ho khác cũng được OPPO đưa vào thiết bị như khả năng quay video
+                        xóa
+                        phông, chụp ảnh macro 3 cm, quay video 4K hay phần mềm Soloop hỗ trợ edit video cực nhanh để
+                        chia sẻ
+                        lên
+                        mạng xã hội...
+
+                        Ở phía trước là camera selfie với độ phân giải khủng 44 MP, bên cạnh các chế độ làm đẹp trứ
+                        danh,
+                        OPPO
+                        cũng trang bị khả năng chụp đêm cho camera trước, cho những bức ảnh với đèn neon hay đèn đường
+                        ban
+                        đêm
+                        vẫn lung linh và nịnh mắt.
+
+                        OPPO Reno3 | Selfie xóa phông và selfie thiếu sáng
+
+                        Thiết kế thu hút, vân tay trong màn hình
+                        Toàn bộ máy đều được hoàn thiện hoàn toàn từ hai mặt kính giúp thiết bị trở nên bóng bẩy hơn và
+                        đẹp
+                        mắt
+                        hơn.
+
+                        OPPO Reno3 | Màn hình tràn viền thời trang
+
+                        OPPO Reno3 sở hữu màn hình giọt nước, mặc dù không phải là kiểu thiết kế FullView và có camera
+                        "vây
+                        cá
+                        mập" như trên thế hệ tiền nhiệm, nhưng nhờ viền cạnh mỏng cùng kích thước màn hình lớn giúp trải
+                        nghiệm
+                        cũng đủ thoải mái và thích thú.
+
+                        OPPO Reno3 | Thiết kế cạnh viền
+
+                        Màn hình Super AMOLED Full HD+ trên OPPO Reno3 cho màu sắc tươi sáng, hỗ trợ dải màu chuẩn điện
+                        ảnh
+                        DCI-P3 và cho độ sáng cực cao lên đến 1200 nits, giúp người dùng dễ dàng sử dụng cả trong điều
+                        kiện
+                        ngoài trời hay có ánh sáng mạnh xung quanh.
+
+                        Chiếc smartphone OPPO này cũng sở hữu cảm biến vân tay bên trong màn hình giúp bạn có thể mở
+                        khóa
+                        một
+                        cách dễ dàng. Tốc độ mở khóa được OPPO công bố chỉ vào khoảng 0.34s. Ngoài ra bạn cũng có thể
+                        lựa
+                        chọn
+                        mở khóa bằng khuôn mặt với tốc độ siêu nhanh nếu muốn.
+
+                        OPPO Reno3 | Cảm biến vân tay trong màn hình
+
+                        Hiệu năng mạnh mẽ, chiến game siêu mượt
+                        OPPO Reno3 được trang bị con chip Helio P90 8 nhân, đây là dòng chip mới của MediaTek với hiệu
+                        năng
+                        vô
+                        cùng mạnh mẽ. Đi cùng với đó là dung lượng RAM 8 GB giúp bạn có thể trải nghiệm các tựa game hot
+                        hiện
+                        nay như Liên Quân, PUBG hay Asphalt 9,... một cách ổn định.
+
+                        OPPO Reno3 | Hiệu năng mạnh mẽ
+
+                        Ngoài ra dung lượng RAM lớn còn giúp máy có thể xử lý đa nhiệm một cách mượt mà mà không xảy ra
+                        hiện
+                        tượng giật lag. Bộ nhớ trong của máy lên đến 128 GB cho bạn không gian lưu trữ rộng lớn hình
+                        ảnh,
+                        video
+                        hay cài đặt các ứng dụng nặng mà không lo đến việc đầy bộ nhớ.
+
+                        OPPO Reno3 | Khay sim
+
+                        Thiết bị cũng được trang bị công nghệ Hyper Boost giúp tối ưu đáng kể hiệu năng của thiết bị khi
+                        chơi
+                        game hay chạy các tác vụ nặng. Tính năng Touch Plus giúp ổn định khung hình hơn.
+
+                        Pin lớn sạc siêu nhanh
+                        Mẫu smartphone nhà OPPO sở hữu pin khủng 4.025 mAh cho phép bạn sử dụng suốt cả ngày.
+
+                        OPPO Reno3 | Thời lượng pin lớn
+
+                        Tuy nhiên, khi pin cạn thì bạn không cần phải quá lo lắng vì OPPO cũng đã trang bị cho OPPO
+                        Reno3
+                        công
+                        nghệ sạc nhanh Super VOOC 3.0 cho phép sạc từ 0 đến 50% trong 30 phút và sạc đầy chỉ với 73 phút
+                        (theo
+                        OPPO công bố).
+
+                        OPPO Reno3 | Dung lượng pin lớn, hỗ trợ sạc nhanh
+
+                        Những điểm cộng đáng chú ý khác trên OPPO Reno 3 bao gồm việc trang bị công nghệ âm thanh Hi-Res
+                        Audio
+                        và Dolby Atmos sống động, hệ điều hành ColorOS 7 với giao diện đẹp mắt và </p>
+                </div>
+
+            </div>
+
+
+        </div>
+
+        <hr>
+
+        <div class="row danh_gia_dien_thoai mt-3">
+            <div class="col-9">
+                <div class="row">
+                    <div class="col-12">
+                        <h3>Bình luận về sản phẩm</h3>
+                        <div class="form-group">
+                            <label for=""></label>
+                            <textarea class="form-control" placeholder="Viết phản hồi của bạn về sản phẩm..." name=""
+                                id="" rows="3"></textarea>
+                            <button type="button" name="" id=""
+                                class="btn mt-2 btn-primary btn-lg btn-block">Gửi</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="row line_comment">
+                            <div class="col-12">
+                                <h5>Trương Đức Hoàn</h5>
+                                <p>Sản phẩm tốt giá cả hợp lý vừa túi tiền của sinh viên, cửa hàng phục vụ tận tình chu
+                                    đáo, có các chương trình khuyến mãi hậu hĩnh</p>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row line_comment">
+                            <div class="col-12">
+                                <h5>Trương Đức Hoàn</h5>
+                                <p>Sản phẩm tốt giá cả hợp lý vừa túi tiền của sinh viên, cửa hàng phục vụ tận tình chu
+                                    đáo, có các chương trình khuyến mãi hậu hĩnh</p>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row line_comment">
+                            <div class="col-12">
+                                <h5>Trương Đức Hoàn</h5>
+                                <p>Sản phẩm tốt giá cả hợp lý vừa túi tiền của sinh viên, cửa hàng phục vụ tận tình chu
+                                    đáo, có các chương trình khuyến mãi hậu hĩnh</p>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row line_comment">
+                            <div class="col-12">
+                                <h5>Trương Đức Hoàn</h5>
+                                <p>Sản phẩm tốt giá cả hợp lý vừa túi tiền của sinh viên, cửa hàng phục vụ tận tình chu
+                                    đáo, có các chương trình khuyến mãi hậu hĩnh</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
+
+    <div class="container-fluid mt-5 footer">
+        <div class="container">
+          <div class="row">
+            <div class="col">
+              <h6>Hệ thống Mona Media</h6>
+              <p>Chính sách & Quy định chung</p>
+              <p>Chính sách đổi trả sản phẩm</p>
+              <p>Chính sách bảo hành</p>
+              <p>Chính sách giao hàng</p>
+            </div>
+            <div class="col">
+              <h6>Thông tin khuyến mãi</h6>
+              <p>Giới thiệu</p>
+              <p>Tin tức</p>
+              <p>Tin khuyến mãi</p>
+              <p>Tuyển dụng</p>
+            </div>
+            <div class="col">
+              <h6>Hỗ trợ khách hàng</h6>
+              <p>Hỗ trợ mua hàng trực tuyến</p>
+              <p>Các hình thức thanh toán</p>
+              <p>Hướng dẫn mua hàng trực tuyến</p>
+              <p>Phát hành hóa đơn</p>
+            </div>
+            <div class="col">
+              <h6>Hỗ trợ khách hàng</h6>
+              <p>Hỗ trợ mua hàng trực tuyến</p>
+              <p>Các hình thức thanh toán</p>
+              <p>Hướng dẫn mua hàng trực tuyến</p>
+              <p>Phát hành hóa đơn</p>
+            </div>
+          </div>
+        </div>
+    
+      </div>
+
+      <footer>
+        <p>© All rights reserved. Create by Trương Đức Hoàn</p>
+      </footer>
+
+
+
+
     <script src="../js/jquery.min.js"></script>
     <script src="../js/popper.min.js"></script>
     <script src="../js/bootstrap.min.js"></script>
-    <script>
-        $(document).ready(() => {
-            $('#dropdownId').hover(() => {
-                $("#dropdownId1").show();
-                alert("hello")
-            })
-            const temp = require('../dataMock/dienThoai.js');
-            console.log(temp)
-        })
-    </script>
+    <script src="../dataMock/dienThoai.js"></script>
+    <script src="../js/detailPage.js"></script>
 </body>
 
 </html>
