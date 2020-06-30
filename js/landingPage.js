@@ -206,16 +206,18 @@ $(document).ready(function () {
         console.log("dang nhap thanh cong");
         $(".right-nav").empty();
         $(".right-nav").append(
-          '<li class="nav-item "><img src="../icon/gioHang-icon.svg" alt=""></li><li class="nav-item"><a href="#"><img src="../icon/person.svg" alt=""></a></li>'
+          '<li class="nav-item "><img src="../icon/gioHang-icon.svg" alt=""></li><li class="nav-item"><a href="#" class="btn btn-primary">Quản trị hệ thống</a></li>'
         );
         $("#modalLogin").modal("hide");
       } else {
         console.log("mat khau khong chinh xac");
         $("#thongBaoPasswordDangNhap").text("Mật khẩu không đúng.");
+        $("#emailDangNhap").text("*");
       }
     else {
       console.log("ten tai khoan khong ton tai");
       $("#emailDangNhap").text("Tài khoản không tồn tại.");
+      $("#thongBaoPasswordDangNhap").text("*");
     }
   });
 
@@ -230,7 +232,9 @@ $(document).ready(function () {
       .slice((indexInArray + 2 - 1) * 4 - 1, (indexInArray + 2 - 1) * 4 - 1 + 4)
       .map((item) => {
         let tempChar =
-          '<a href=""# class="col"><div class="card item-ban-chay"><img class="card-img-top" src="data:image/png;base64,' +
+          '<a target="_blank" href="chiTietDienThoai.html?id=' +
+          item.id +
+          '" class="col"><div class="card item-ban-chay"><img class="card-img-top" src="data:image/png;base64,' +
           item.hinh +
           '" alt=""><div class="card-body"><h4 class="card-title">' +
           item.tenDienThoai +
@@ -246,4 +250,70 @@ $(document).ready(function () {
   });
 
   setMaxHeight(".item-ban-chay");
+
+  const kiemTraUserName = () => {
+    const re = /^[a-zA-Z]\w{7,}$/;
+    if (re.test($("#exampleInputEmail12").val())) {
+      $("#tbUserName").addClass("text-success");
+      $("#tbUserName").removeClass("text-danger");
+      $("#tbUserName").text("Tên đăng nhập hợp lệ");
+      return true;
+    } else {
+      $("#tbUserName").addClass("text-danger");
+      $("#tbUserName").removeClass("text-success");
+      $("#tbUserName").text("Tên đăng nhập phải bắt đầu bằng chữ cái và dài hơn 8 ký tự");
+      return false;
+    }
+  };
+
+  const kiemTraMatKhau = () => {
+    const passTrungBinh = /^(((?=.*[a-z])(?=.*[A-Z]))|((?=.*[a-z])(?=.*[0-9]))|((?=.*[A-Z])(?=.*[0-9])))(?=.{6,})/
+    const passManh = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})/
+
+    if(passTrungBinh.test($('#txtPasswordDangKy').val())){
+      $('#tbPassWord').addClass('text-warning');
+      $('#tbPassWord').removeClass('text-danger');
+      $('#tbPassWord').text('Độ manh mật khẩu: Trung bình');
+      return true;
+    }else if(passManh.test($('#txtPasswordDangKy').val())){
+      $('#tbPassWord').addClass('text-success');
+      $('#tbPassWord').removeClass('text-danger');
+      $('#tbPassWord').text('Độ manh mật khẩu: Mạnh');
+      return true;
+    }else {
+      $('#tbPassWord').addClass('text-danger');
+      $('#tbPassWord').text('Độ manh mật khẩu: yếu');
+      return false;
+    }
+  }
+
+  const kiemTraNhapLaiPass = () => {
+    if($('#txtNhapLaiPass').val() != $('#txtPasswordDangKy').val()){
+      $('#tbNhapLaiPass').addClass("text-danger");
+      $('#tbNhapLaiPass').text('Mật khẩu không trùng!');
+      return false;
+    }else{
+      $('#tbNhapLaiPass').addClass("text-success");
+      $('#tbNhapLaiPass').text('Mật khẩu ok.');
+      return true;
+    }
+  }
+
+  $('#exampleInputEmail12').on('input',function(e){
+    kiemTraUserName();
+   });
+
+   $('#txtPasswordDangKy').on('input', function (e) { 
+     e.preventDefault();
+     kiemTraMatKhau();
+   });
+
+   $('#txtNhapLaiPass').on('input', function (e) {
+     e.preventDefault();
+     kiemTraNhapLaiPass();
+   });
+
+  $("#formDangKy").submit(function (e) {
+    e.preventDefault();
+  });
 });
