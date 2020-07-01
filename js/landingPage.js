@@ -206,7 +206,7 @@ $(document).ready(function () {
         console.log("dang nhap thanh cong");
         $(".right-nav").empty();
         $(".right-nav").append(
-          '<li class="nav-item "><img src="../icon/gioHang-icon.svg" alt=""></li><li class="nav-item"><a href="#" class="btn btn-primary">Quản trị hệ thống</a></li>'
+          '<li class="nav-item "><img src="../icon/gioHang-icon.svg" alt=""></li><li class="nav-item"><a href="manager.html" class="btn btn-primary">Quản trị hệ thống</a></li>'
         );
         $("#modalLogin").modal("hide");
       } else {
@@ -315,5 +315,14 @@ $(document).ready(function () {
 
   $("#formDangKy").submit(function (e) {
     e.preventDefault();
+    if (kiemTraUserName() && kiemTraMatKhau() && kiemTraNhapLaiPass()) {
+      const temp = {
+        username: $('#exampleInputEmail12').val(),
+        password: $('#txtPasswordDangKy').val()
+      }
+
+      listTaiKhoan.push(temp);
+      $('#modalDangKy').modal('hide')
+    }
   });
 });
